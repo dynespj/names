@@ -19,7 +19,6 @@ def getNames(years = range(2010,2015), number = 'p', female = True, top = 10):
             names += list(data[i]['Male name'])
 
     names = list(set(names))
-
     stats = {'Names' : names}
     ranks = {'Names' : names}
 
@@ -49,7 +48,6 @@ def getNames(years = range(2010,2015), number = 'p', female = True, top = 10):
         stats[str(years[i])] = statsvec
         ranks[str(years[i])] = ranksvec
 
-        stats = pd.DataFrame(stats)
-        ranks = pd.DataFrame(ranks)
-            
+    stats = pd.DataFrame(stats)
+    ranks = pd.DataFrame(ranks) 
     return stats, ranks
